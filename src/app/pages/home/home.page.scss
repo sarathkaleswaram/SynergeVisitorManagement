@@ -1,0 +1,52 @@
+ion-toolbar {
+  // TODO test transparent and fullscreen
+  --background: transparent;
+  --border-color: transparent;
+}
+
+.swiper-slide {
+  display: block;
+}
+
+.slide-title {
+  margin-top: 2.8rem;
+}
+
+.slide-image {
+  max-height: 50%;
+  max-width: 60%;
+  margin: 36px 0;
+}
+
+.swiper-container {
+  position: unset !important;
+}
+
+.icon-left {
+  position: absolute;
+  left: 1%;
+  font-size: 5vw;
+  color: #60646b;
+  top: 50%; 
+  z-index: 99;
+}
+
+.icon-right {
+  position: absolute;
+  right: 1%;
+  font-size: 5vw;
+  color: #60646b;
+  top: 50%;
+  z-index: 99;
+}
+
+b {
+  font-weight: 500;
+}
+
+p {
+  padding: 0 40px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #60646b;
+}

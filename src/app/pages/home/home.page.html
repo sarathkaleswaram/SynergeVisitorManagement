@@ -1,0 +1,100 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color='primary' (click)="startApp()" [hidden]="!showSkip">Skip</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <a class="icon-left" (click)="onLeftClick()" *ngIf="showLeftArrow">
+    <ion-icon name="arrow-round-back"></ion-icon>
+  </a>
+  <ion-slides #slides pager="true" (ionSlideWillChange)="onSlideChange()">
+    <ion-slide>
+      <h2>Welcome to</h2>
+      <img src="assets/img/synerge.png" class="slide-image" />
+      <h3>
+        TOGETHER WE CREATE
+        <b>'SYNERGE'</b>
+      </h3>
+      <br>
+      <span>WHO WE ARE</span>
+      <p>
+        We founded SYNERGE for people just like us: curious, hard working, sociable entrepreneurs. People who want to focus on creating
+        great, innovative products and businesses without worrying about rent, electricity or running out of coffee.
+      </p>
+      <!-- <p>
+        Our state-of-the-art Work Space offers everything you need in order to get started: meeting rooms, comfortable workstations,
+        networking opportunities and, needless to say, snacks and drinks. We’re extremely proud of our creative residents,
+        so why not join our community? Give us a call today to book your tour.
+      </p> -->
+      <p>Swipe left to check out what <b>We Offer.</b></p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/meeting-space.jpg" class="slide-image" />
+      <h2 class="slide-title">
+        <b>Instant Meeting Rooms</b>
+      </h2>
+      <p>
+        Entrepreneurship is in the air at SYNERGE, and our Meeting Rooms make the perfect places for this vibe to rub off on you.
+        As with all of our workspaces, this option comes with our full range of benefits and facility amenities. Join our
+        energetic and vibrant community and find a home for you and your business.
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/office-space.jpg" class="slide-image" />
+      <h2 class="slide-title">
+        <b>Office Space</b>
+      </h2>
+      <p>
+        Our Private Office Spaces are great options if you’re looking for consistency and quality with a workspace. Our Work Space
+        provides secure access so you can rest assured that you have a safe and comfortable environment to be productive.
+        Enjoy the vibe of a traditional office with the benefits of all our amenities and community events.
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/working-desk.jpg" class="slide-image" />
+      <h2 class="slide-title">
+        <b>Co-Working Desks</b>
+      </h2>
+      <p>
+        At SYNERGE, our custom workspace options can be adapted to all your professional needs. This is a great option for freelancers
+        and startups with flexible schedules that are looking for an affordable space to work in. All comes with high-speed
+        internet, printing services and more.with 5 seat capacity.
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/managers-cabin.png" class="slide-image" />
+      <h2 class="slide-title">
+        <b>Managers Cabin</b>
+      </h2>
+      <p>
+        At SYNERGE, our custom manager cabin option can be adapted to all your professional needs. who is looking for an affordable
+        space to work in. with all the services included with one extra workchair and two visitor chairs.
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/cafeteria.jpg" class="slide-image" />
+      <h2 class="slide-title">
+        <b>Cafeteria</b>
+      </h2>
+      <p>
+        Contant coming soon.
+      </p>
+      <br>
+      <ion-button fill="clear" (click)="onContinueClick()">
+        Continue
+        <ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-slide>
+  </ion-slides>
+  <a class="icon-right" (click)="onRightClick()" *ngIf="showRightArrow">
+    <ion-icon name="arrow-round-forward"></ion-icon>
+  </a>
+</ion-content>

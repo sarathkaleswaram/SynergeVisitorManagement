@@ -1,5 +1,7 @@
 {
   "name": "SynergeVisitorManagement",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

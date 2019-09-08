@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="signup-logo">
+    <img src="assets/img/synerge.png" alt="Synerge Logo">
+  </div>
+
+  <form #signupForm="ngForm" novalidate>
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating" color="primary">Name</ion-label>
+        <ion-input [(ngModel)]="signup.name" name="name" type="text" #name="ngModel" required autofocus="true">
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger">
+        <p [hidden]="name.valid || submitted == false" class="ion-padding-start">
+          Name is required
+        </p>
+      </ion-text>
+
+      <ion-item>
+        <ion-label position="floating" color="primary">Email</ion-label>
+        <ion-input [(ngModel)]="signup.email" name="email" type="email" #email="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger">
+        <p [hidden]="email.valid || submitted == false" class="ion-padding-start">
+          Email is required
+        </p>
+      </ion-text>
+      <ion-item>
+        <ion-label position="floating" color="primary">Phone</ion-label>
+        <ion-input [(ngModel)]="signup.phone" name="phone" type="number" #phone="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger">
+        <p [hidden]="phone.valid || submitted == false" class="ion-padding-start">
+          Phone is required
+        </p>
+      </ion-text>
+      <ion-item>
+        <ion-label position="floating" color="primary">Location</ion-label>
+        <ion-input [(ngModel)]="signup.location" name="location" type="text" #location="ngModel" required>
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger">
+        <p [hidden]="location.valid || submitted == false" class="ion-padding-start">
+          Location is required
+        </p>
+      </ion-text>
+      <ion-item>
+        <ion-label position="floating" color="primary">Number Of Employees</ion-label>
+        <ion-input [(ngModel)]="signup.numberofemployees" name="numberofemployees" type="number">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating" color="primary">Start Date</ion-label>
+        <!-- <ion-input [(ngModel)]="signup.startDate" name="startDate" type="text" #numberofemployees="ngModel"> -->
+        <ion-datetime [(ngModel)]="signup.startDate" name="startDate" displayFormat="DD/MMM/YYYY"></ion-datetime>
+      </ion-item>
+      <ion-item>
+          <ion-label position="floating" color="primary">End Date</ion-label>
+          <!-- <ion-input [(ngModel)]="signup.endDate" name="startDate" type="text" #numberofemployees="ngModel"> -->
+          <ion-datetime [(ngModel)]="signup.endDate" name="endDate" displayFormat="DD/MMM/YYYY"></ion-datetime>
+        </ion-item>
+    </ion-list>
+
+    <div class="ion-padding">
+      <ion-button (click)="onSubmit(signupForm)" type="submit" expand="block">Submit</ion-button>
+    </div>
+  </form>
+
+</ion-content>
